@@ -1,5 +1,5 @@
 import React from 'react';
-import { PaintBucket, Clock, CheckCircle, Shield, Award, Users } from 'lucide-react';
+import { PaintBucket, Clock, CheckCircle, Shield, Award, Users, Trash2, Calculator, Calendar, Star } from 'lucide-react';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import AnimatedElement from '../components/AnimatedElement';
@@ -154,142 +154,76 @@ const Home: React.FC = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Professional Quality Results</h3>
+                <Trash2 className="w-10 h-10 text-primary-600 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Comprehensive Clean-Up</h3>
                 <p className="text-gray-600">
-                  Our experienced Chennai painters use high-quality materials to ensure your space looks stunning and the results last. This means your property will stand out and stay beautiful for years.
+                  No mess left behind means you can enjoy your freshly painted space without any post-project hassle.
                 </p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Stress-Free Process</h3>
-                <p className="text-gray-600">
-                  From consultation to clean-up, our painting contractors in Chennai handle every detail with care. You can relax, knowing that your painting project will be completed seamlessly, with no hassles or hidden surprises.
-                </p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <Calculator className="w-10 h-10 text-primary-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Transparent Pricing</h3>
                 <p className="text-gray-600">
-                  We provide upfront, detailed quotes with no hidden fees. You know exactly what to expect, giving you confidence and peace of mind throughout the project.
-                </p>
-              </div>
-            </div>
-          </AnimatedElement>
-        </Container>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <Container>
-          <AnimatedElement animation="fade-up">
-            <SectionTitle
-              title="Professional Painting Services by Your Trusted Painting Contractors in Chennai"
-              centered={true}
-            />
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Exterior Painting",
-                  description: "Our exterior painting service will protect your property from the elements while adding curb appeal. We use high-quality, weather-resistant paints to ensure your building looks fresh and beautiful for years to come."
-                },
-                {
-                  title: "Interior Painting",
-                  description: "Transform your indoor spaces with our expert interior painting service. We use premium paints and take care of every detail to give your walls a smooth and even finish."
-                },
-                {
-                  title: "Texture Painting",
-                  description: "Looking to add a unique touch to your walls? Our texture painting service offers a wide range of finishes and textures to give your space character and charm."
-                },
-                {
-                  title: "Wood Painting",
-                  description: "Whether it's wooden doors, windows, or furniture, our wood painting service ensures your wood surfaces get the care they need."
-                },
-                {
-                  title: "Metal Painting",
-                  description: "Our metal painting service is designed to protect and beautify your metal surfaces. We apply high-quality paint that prevents rust and adds a polished look to gates, grills, and other metal features."
-                },
-                {
-                  title: "Waterproofing Painting",
-                  description: "Protect your property from water damage with our waterproofing painting service. We use specialized products to create a protective barrier on your walls, preventing leaks and dampness."
-                }
-              ].map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </AnimatedElement>
-        </Container>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <AnimatedElement animation="fade-up">
-            <SectionTitle
-              title="Easy as 1-2-3: Transform Your Space with Our Chennai Painters Process"
-              centered={true}
-            />
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: 1,
-                  title: "Book a Consultation",
-                  description: "Contact us to schedule a consultation with your trusted Chennai painter, where we'll discuss your project needs and goals.",
-                  benefit: "Get clarity on your vision and how our painting contractors in Chennai can bring it to life."
-                },
-                {
-                  step: 2,
-                  title: "Get a Personalized Quote",
-                  description: "We provide a detailed, transparent quote based on your requirements.",
-                  benefit: "Know exactly what to expect, with no surprises."
-                },
-                {
-                  step: 3,
-                  title: "Enjoy the Transformation",
-                  description: "Our expert painters handle every detail from start to finish.",
-                  benefit: "Sit back and enjoy a beautifully painted space without stress."
-                }
-              ].map((step, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg relative">
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    {step.step}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 mt-4">{step.title}</h3>
-                  <p className="text-gray-600 mb-4">{step.description}</p>
-                  <p className="text-primary-600 font-medium">Benefit: {step.benefit}</p>
-                </div>
-              ))}
-            </div>
-          </AnimatedElement>
-        </Container>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <Container>
-          <AnimatedElement animation="fade-up">
-            <SectionTitle
-              title="Quality Features of Chennai Painting Contractors You Can Trust"
-              centered={true}
-            />
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">High-Quality Materials</h3>
-                <p className="text-gray-600">
-                  You get a stunning finish that lasts for years means your space will look beautiful, and you won't have to worry about repainting anytime soon.
+                  No hidden costs or surprises means you can plan your budget confidently, knowing exactly what you're paying for.
                 </p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Experienced Team</h3>
+                <Calendar className="w-10 h-10 text-primary-600 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Flexible Scheduling</h3>
                 <p className="text-gray-600">
-                  Professional results, delivered efficiently means your project is handled by skilled Chennai painters, giving you peace of mind and confidence in the outcome.
+                  Painting done at your convenience means minimal disruption to your daily life, ensuring a hassle-free experience.
                 </p>
+              </div>
+            </div>
+          </AnimatedElement>
+        </Container>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-20 bg-white">
+        <Container>
+          <AnimatedElement animation="fade-up">
+            <div className="bg-primary-50 rounded-xl p-12">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Worried About Hiring the Wrong Painters in Chennai? Let Us Prove You Wrong!
+                </h2>
+                
+                <p className="text-lg text-gray-600 mb-12">
+                  We understand that hiring a painting contractor in Chennai can feel risky. Will they show up on time? Will the work be of high quality? With Chennai Painter, you can put those worries to rest.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <Star className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Track Record</h3>
+                    <p className="text-gray-600">
+                      Over 300 completed projects across Chennai and countless happy clients.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <Calculator className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Transparent Quotes</h3>
+                    <p className="text-gray-600">
+                      No surprises, no hidden fees—just honest pricing.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <Shield className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Satisfaction Guarantee</h3>
+                    <p className="text-gray-600">
+                      We aren't happy until you are. Your satisfaction is our top priority.
+                    </p>
+                  </div>
+                </div>
+                
+                <Button variant="primary" size="lg">
+                  Take the First Step Today
+                </Button>
               </div>
             </div>
           </AnimatedElement>
